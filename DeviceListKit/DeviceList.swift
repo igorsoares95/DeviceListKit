@@ -8,7 +8,7 @@
 import UIKit
 /// Enum representing the different types of iOS devices available
 
-enum DeviceType: String, CaseIterable {
+public enum DeviceType: String, CaseIterable {
   case iPhone2G
 
   case iPhone3G
@@ -87,7 +87,7 @@ enum DeviceType: String, CaseIterable {
   case simulator
   case notAvailable
   
-  enum GroupType {
+  public enum GroupType {
     case iPad
     case notch
     case large
@@ -97,7 +97,7 @@ enum DeviceType: String, CaseIterable {
     case notAvailable
   }
   
-  var group: GroupType {
+  public var group: GroupType {
     switch self {
     case .iPad, .iPad2, .iPad3, .iPad4, .iPad5, .iPad6, .iPad7, .iPad8,
          .iPadMini, .iPadMiniRetina, .iPadMini3, .iPadMini4, .iPadMini5,
@@ -120,11 +120,11 @@ enum DeviceType: String, CaseIterable {
     }
   }
   
-  static var isSimulator: Bool {
+  public static var isSimulator: Bool {
     return TARGET_OS_SIMULATOR != 0
   }
   
-  static var current: DeviceType {
+  public static var current: DeviceType {
     var identifier: String = ""
     if isSimulator {
       identifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? ""
@@ -138,7 +138,7 @@ enum DeviceType: String, CaseIterable {
     return DeviceType(identifier: identifier)
   }
   
-  var displayName: String {
+  public var displayName: String {
     switch self {
     case .iPhone2G: return "iPhone 2G"
     case .iPhone3G: return "iPhone 3G"
