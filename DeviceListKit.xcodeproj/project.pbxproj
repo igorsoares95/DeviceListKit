@@ -16,6 +16,7 @@
 		8B067BC925597D71001BC2AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B067BC725597D71001BC2AB /* Main.storyboard */; };
 		8B067BCB25597D73001BC2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B067BCA25597D73001BC2AB /* Assets.xcassets */; };
 		8B067BCE25597D73001BC2AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B067BCC25597D73001BC2AB /* LaunchScreen.storyboard */; };
+		8B7E4785255980FF002CFEE4 /* DeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7E4784255980FF002CFEE4 /* DeviceList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		8B067BCA25597D73001BC2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B067BCD25597D73001BC2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B067BCF25597D73001BC2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7E4784255980FF002CFEE4 /* DeviceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				8B067BA225597D07001BC2AB /* DeviceListKit.h */,
 				8B067BA325597D07001BC2AB /* Info.plist */,
+				8B7E4784255980FF002CFEE4 /* DeviceList.swift */,
 			);
 			path = DeviceListKit;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				TargetAttributes = {
 					8B067B9E25597D07001BC2AB = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 					8B067BA725597D07001BC2AB = {
 						CreatedOnToolsVersion = 12.1;
@@ -262,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7E4785255980FF002CFEE4 /* DeviceList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +443,7 @@
 		8B067BB425597D07001BC2AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = L4C27C89AH;
@@ -454,6 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = igorsoares.DeviceListKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +469,7 @@
 		8B067BB525597D07001BC2AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = L4C27C89AH;
@@ -486,6 +494,7 @@
 		8B067BB725597D07001BC2AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L4C27C89AH;
 				INFOPLIST_FILE = DeviceListKitTests/Info.plist;
@@ -504,6 +513,7 @@
 		8B067BB825597D07001BC2AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L4C27C89AH;
 				INFOPLIST_FILE = DeviceListKitTests/Info.plist;
