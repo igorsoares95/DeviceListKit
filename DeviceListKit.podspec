@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DeviceListKit"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "A CocoaPods library written in Swift"
 
   spec.description  = <<-DESC
