@@ -1,4 +1,4 @@
-#
+ #
 #  Be sure to run `pod spec lint DeviceListKit.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
@@ -9,11 +9,11 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DeviceListKit"
-  spec.version      = "0.0.4"
-  spec.summary      = "A CocoaPods library written in Swift"
+  spec.version      = "0.0.5"
+  spec.summary      = "DeviceListKit is a helper of UIDevice"
 
   spec.description  = <<-DESC
-This CocoaPods library helps you perform calculation.
+DeviceListKit is a helper of UIDevice.
                    DESC
 
   spec.homepage     = "https://github.com/igorsoares95/DeviceListKit"
@@ -21,7 +21,7 @@ This CocoaPods library helps you perform calculation.
   spec.author       = { "igorsoares95" => "igor_soares95@hotmail.com" }
 
   spec.ios.deployment_target = "10.3"
-  spec.swift_version = "4.2"
+  spec.swift_version = "5.0"
 
   spec.source        = { :git => "https://github.com/igorsoares95/DeviceListKit.git", :tag => "#{spec.version}" }
   spec.source_files  = "DeviceListKit/**/*.{h,m,swift}"
