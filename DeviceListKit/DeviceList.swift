@@ -268,8 +268,8 @@ public enum DeviceType: String, CaseIterable {
 
     case .iPadPro9Inch: return ["iPad6,3", "iPad6,4"]
     case .iPadPro10p5Inch: return ["iPad7,3", "iPad7,4"]
-    case .iPadPro11Inch: return ["iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4", "iPad8,9", "iPad8,10"]
-    case .iPadPro12Inch: return ["iPad6,7", "iPad6,8", "iPad7,1", "iPad7,2", "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8", "iPad8,11", "iPad8,12"]
+    case .iPadPro11Inch: return ["iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4", "iPad8,9", "iPad8,10", "iPad13,4", "iPad13,5", "iPad13,5", "iPad13,6", "iPad13,7"]
+    case .iPadPro12Inch: return ["iPad6,7", "iPad6,8", "iPad7,1", "iPad7,2", "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8", "iPad8,11", "iPad8,12", "iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11"]
     }
   }
   
