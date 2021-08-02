@@ -5,7 +5,7 @@
 //  Created by Igor Soares on 09/11/20.
 //
 
-import UIKit
+import Foundation
 /// Enum representing the different types of iOS devices available
 
 public enum DeviceType: String, CaseIterable {
