@@ -12,8 +12,8 @@ let package = Package(
     targets: [
         .target(
             name: "DeviceListKit",
-            path: "DeviceListKit"
-            exclude: ["Info.plist"])
+            path: "DeviceListKit",
+            exclude: ["Info.plist"]
         )
     ]
 )
