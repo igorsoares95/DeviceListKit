@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DeviceListKit"
-  spec.version      = "0.0.8"
+  spec.version      = "1.0.0"
   spec.summary      = "DeviceListKit is a helper of UIDevice"
 
   spec.description  = <<-DESC
