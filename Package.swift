@@ -12,6 +12,7 @@ let package = Package(
     targets: [
         .target(
             name: "DeviceListKit",
-            dependencies: []),
+            path: "TPKeyboardAvoiding"
+        )
     ]
 )
