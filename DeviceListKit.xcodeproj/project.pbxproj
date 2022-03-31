@@ -44,6 +44,7 @@
 		8B067BCA25597D73001BC2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B067BCD25597D73001BC2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B067BCF25597D73001BC2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B40E47A26B85C0200F67C23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		8B7E4784255980FF002CFEE4 /* DeviceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +81,7 @@
 				8B067BAC25597D07001BC2AB /* DeviceListKitTests */,
 				8B067BC025597D71001BC2AB /* DeviceListKitExamples */,
 				8B067BA025597D07001BC2AB /* Products */,
+				8B40E47926B85C0200F67C23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +126,14 @@
 				8B067BCF25597D73001BC2AB /* Info.plist */,
 			);
 			path = DeviceListKitExamples;
+			sourceTree = "<group>";
+		};
+		8B40E47926B85C0200F67C23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B40E47A26B85C0200F67C23 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,7 +468,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.6;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = igorsoares.DeviceListKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -486,7 +496,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.6;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = igorsoares.DeviceListKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
