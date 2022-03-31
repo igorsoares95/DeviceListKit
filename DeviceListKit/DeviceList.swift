@@ -8,6 +8,10 @@
 import UIKit
 /// Enum representing the different types of iOS devices available
 
+
+// Link Helper
+// https://stackoverflow.com/questions/26028918/how-to-determine-the-current-iphone-device-model
+
 public enum DeviceType: String, CaseIterable {
   case iPhone2G
 
