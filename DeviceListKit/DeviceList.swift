@@ -60,6 +60,11 @@ public enum DeviceType: String, CaseIterable {
   case iPhone13
   case iPhone13Pro
   case iPhone13ProMax
+  
+  case iPhone14
+  case iPhone14Plus
+  case iPhone14Pro
+  case iPhone14ProMax
 
   case iPodTouch1G
   case iPodTouch2G
@@ -101,6 +106,7 @@ public enum DeviceType: String, CaseIterable {
   
   public enum GroupType {
     case iPad
+    case dynamicIsland
     case notch
     case large
     case medium
@@ -115,19 +121,28 @@ public enum DeviceType: String, CaseIterable {
          .iPadMini, .iPadMiniRetina, .iPadMini3, .iPadMini4, .iPadMini5, .iPadMini6,
          .iPadAir, .iPadAir2, .iPadAir3, .iPadAir4, .iPadPro9Inch, .iPadPro10p5Inch, .iPadPro11Inch, .iPadPro12Inch:
       return .iPad
+      
+    case .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax:
+      return .dynamicIsland
+    
     case .iPhoneX, .iPhoneXR, .iPhoneXS, .iPhoneXSMax,
          .iPhone11, .iPhone11Pro, .iPhone11ProMax,
          .iPhone12Mini, .iPhone12, .iPhone12Pro, .iPhone12ProMax,
         .iPhone13Mini, .iPhone13, .iPhone13Pro, .iPhone13ProMax:
       return .notch
+      
     case .iPhone6Plus, .iPhone6SPlus, .iPhone7Plus, .iPhone8Plus:
       return .large
+      
     case .iPhone6, .iPhone6S, .iPhone7, .iPhone8, .iPhoneSEGen2, .iPhoneSEGen3:
       return .medium
+      
     case .iPhone2G, .iPhone3G, .iPhone3GS, .iPhone4, .iPhone4S, .iPhone5, .iPhone5S, .iPhone5C, .iPhoneSE:
       return .small
+      
     case .iPodTouch1G, .iPodTouch2G, .iPodTouch3G, .iPodTouch4G, .iPodTouch5G, .iPodTouch6G, .iPodTouch7G:
       return .iPod
+      
     default:
       return .notAvailable
     }
@@ -185,6 +200,10 @@ public enum DeviceType: String, CaseIterable {
     case .iPhone13: return "iPhone 13"
     case .iPhone13Pro: return "iPhone 13 Pro"
     case .iPhone13ProMax: return "iPhone 13 Pro Max"
+    case .iPhone14: return "iPhone 14"
+    case .iPhone14Plus: return "iPhone 14 Plus"
+    case .iPhone14Pro: return "iPhone 14 Pro"
+    case .iPhone14ProMax: return "iPhone 14 Pro Max"
     case .iPhoneSEGen2: return "iPhone SE (2nd Gen)"
     case .iPhoneSEGen3: return "iPhone SE (3rd Gen)"
     case .iPodTouch1G: return "iPod Touch 1G"
@@ -224,43 +243,63 @@ public enum DeviceType: String, CaseIterable {
   }
   
   /// The identifiers associated with each device type
-  internal var identifiers: [String] {
+  var identifiers: [String] {
     switch self {
     case .notAvailable: return []
     case .simulator: return ["i386", "x86_64"]
       
     case .iPhone2G: return ["iPhone1,1"]
+      
     case .iPhone3G: return ["iPhone1,2"]
+      
     case .iPhone3GS: return ["iPhone2,1"]
+      
     case .iPhone4: return ["iPhone3,1", "iPhone3,2", "iPhone3,3"]
+      
     case .iPhone4S: return ["iPhone4,1"]
+      
     case .iPhone5: return ["iPhone5,1", "iPhone5,2"]
+      
     case .iPhone5C: return ["iPhone5,3", "iPhone5,4"]
     case .iPhone5S: return ["iPhone6,1", "iPhone6,2"]
+      
     case .iPhone6: return ["iPhone7,2"]
     case .iPhone6Plus: return ["iPhone7,1"]
+      
     case .iPhone6S: return ["iPhone8,1"]
     case .iPhone6SPlus: return ["iPhone8,2"]
-    case .iPhoneSE: return ["iPhone8,4"]
+      
     case .iPhone7: return ["iPhone9,1", "iPhone9,3"]
     case .iPhone7Plus: return ["iPhone9,2", "iPhone9,4"]
+      
     case .iPhone8: return ["iPhone10,1", "iPhone10,4"]
     case .iPhone8Plus: return ["iPhone10,2", "iPhone10,5"]
     case .iPhoneX: return ["iPhone10,3", "iPhone10,6"]
+      
     case .iPhoneXS: return ["iPhone11,2"]
     case .iPhoneXSMax: return ["iPhone11,4", "iPhone11,6"]
     case .iPhoneXR: return ["iPhone11,8"]
+      
     case .iPhone11: return ["iPhone12,1"]
     case .iPhone11Pro: return ["iPhone12,3"]
     case .iPhone11ProMax: return ["iPhone12,5"]
+      
     case .iPhone12Mini: return ["iPhone13,1"]
     case .iPhone12: return ["iPhone13,2"]
     case .iPhone12Pro: return ["iPhone13,3"]
     case .iPhone12ProMax: return ["iPhone13,4"]
+      
     case .iPhone13Mini: return ["iPhone14,4"]
     case .iPhone13: return ["iPhone14,5"]
     case .iPhone13Pro: return ["iPhone14,2"]
     case .iPhone13ProMax: return ["iPhone14,3"]
+      
+    case .iPhone14: return ["iPhone14,7"]
+    case .iPhone14Plus: return ["iPhone14,8"]
+    case .iPhone14Pro: return ["iPhone15,2"]
+    case .iPhone14ProMax: return ["iPhone15,3"]
+
+    case .iPhoneSE: return ["iPhone8,4"]
     case .iPhoneSEGen2: return ["iPhone12,8"]
     case .iPhoneSEGen3: return ["iPhone14,6"]
 
@@ -306,7 +345,7 @@ public enum DeviceType: String, CaseIterable {
   /// Creates a device type
   ///
   /// - Parameter identifier: The identifier of the device
-  internal init(identifier: String) {
+  init(identifier: String) {
     for device in DeviceType.allCases {
       for deviceId in device.identifiers {
         guard identifier == deviceId else { continue }
