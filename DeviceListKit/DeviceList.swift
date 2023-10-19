@@ -66,6 +66,11 @@ public enum DeviceType: String, CaseIterable {
   case iPhone14Pro
   case iPhone14ProMax
   
+  case iPhone15
+  case iPhone15Plus
+  case iPhone15Pro
+  case iPhone15ProMax
+  
   case iPodTouch1G
   case iPodTouch2G
   case iPodTouch3G
@@ -83,6 +88,7 @@ public enum DeviceType: String, CaseIterable {
   case iPad7
   case iPad8
   case iPad9
+  case iPad10Gen
   case iPadMini
   case iPadMiniRetina
   case iPadMini3
@@ -117,12 +123,12 @@ public enum DeviceType: String, CaseIterable {
   
   public var group: GroupType {
     switch self {
-    case .iPad, .iPad2, .iPad3, .iPad4, .iPad5, .iPad6, .iPad7, .iPad8, .iPad9,
+    case .iPad, .iPad2, .iPad3, .iPad4, .iPad5, .iPad6, .iPad7, .iPad8, .iPad9, .iPad10Gen,
          .iPadMini, .iPadMiniRetina, .iPadMini3, .iPadMini4, .iPadMini5, .iPadMini6,
          .iPadAir, .iPadAir2, .iPadAir3, .iPadAir4, .iPadPro9Inch, .iPadPro10p5Inch, .iPadPro11Inch, .iPadPro12Inch:
       return .iPad
       
-    case .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax:
+    case .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax, .iPhone15, .iPhone15Pro, .iPhone15Plus, .iPhone15ProMax:
       return .dynamicIsland
     
     case .iPhoneX, .iPhoneXR, .iPhoneXS, .iPhoneXSMax,
@@ -222,6 +228,7 @@ public enum DeviceType: String, CaseIterable {
     case .iPad7: return "iPad 7"
     case .iPad8: return "iPad 8"
     case .iPad9: return "iPad 9"
+    case .iPad10Gen: return "iPad (10th Gen)"
     case .iPadMini: return "iPad Mini"
     case .iPadMiniRetina: return "iPad Mini Retina"
     case .iPadMini3: return "iPad Mini 3"
@@ -239,6 +246,10 @@ public enum DeviceType: String, CaseIterable {
     case .iPadPro12Inch: return "iPad Pro 12 Inch"
     case .simulator: return "Simulator"
     case .notAvailable: return "Not Available"
+    case .iPhone15: return "iPhone 15"
+    case .iPhone15Plus: return "iPhone 15 Plus"
+    case .iPhone15Pro: return "iPhone 15 Pro"
+    case .iPhone15ProMax: return "iPhone 15 Pro Max"
     }
   }
   
@@ -299,6 +310,11 @@ public enum DeviceType: String, CaseIterable {
     case .iPhone14Pro: return ["iPhone15,2"]
     case .iPhone14ProMax: return ["iPhone15,3"]
       
+    case .iPhone15: return ["iPhone15,4"]
+    case .iPhone15Plus: return ["iPhone15,5"]
+    case .iPhone15Pro: return ["iPhone16,1"]
+    case .iPhone15ProMax: return ["iPhone16,2"]
+      
     case .iPhoneSE: return ["iPhone8,4"]
     case .iPhoneSEGen2: return ["iPhone12,8"]
     case .iPhoneSEGen3: return ["iPhone14,6"]
@@ -320,6 +336,7 @@ public enum DeviceType: String, CaseIterable {
     case .iPad7: return ["iPad7,11", "iPad7,12"]
     case .iPad8: return ["iPad11,6", "iPad11,7"]
     case .iPad9: return ["iPad12,1", "iPad12,2"]
+    case .iPad10Gen: return ["iPad13,18", "iPad13,19"]
       
     case .iPadMini: return ["iPad2,5", "iPad2,6", "iPad2,7"]
     case .iPadMiniRetina: return ["iPad4,4", "iPad4,5", "iPad4,6"]
@@ -337,7 +354,7 @@ public enum DeviceType: String, CaseIterable {
     case .iPadPro9Inch: return ["iPad6,3", "iPad6,4"]
     case .iPadPro10p5Inch: return ["iPad7,3", "iPad7,4"]
     case .iPadPro11Inch: return ["iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4", "iPad8,9", "iPad8,10"]
-    case .iPadPro12Inch: return ["iPad6,7", "iPad6,8", "iPad7,1", "iPad7,2", "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8", "iPad8,11", "iPad8,12", "iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11", "iPad14,5"]
+    case .iPadPro12Inch: return ["iPad6,7", "iPad6,8", "iPad7,1", "iPad7,2", "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8", "iPad8,11", "iPad8,12", "iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11", "iPad14,5", "iPad14,6"]
     }
   }
   
